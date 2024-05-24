@@ -1,0 +1,19 @@
+{
+  "name": "flash_card",
+  "version": "1.0.0",
+  "description": "Flash card's backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshwar/flash_card.git"
+  },
+  "author": "Dineshwar R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dineshwar/flash_card/issues"
+  },
+  "homepage": "https://github.com/dineshwar/flash_card#readme"
+}
