@@ -14,7 +14,50 @@ datasource db {
 }
 
 model User {
+  id                Int      @id @default(autoincrement())
+  username          String   @unique
+  email             String   @unique
+  fullName          String?
+  profilePictureUrl String?
+  role              String   @default("user")
+  status            String   @default("active")
+  passwordHash      String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  // Relations
+  Desk  Desk[]
+  Token Token[]
+}
+
+model Token {
+  id       Int      @id @default(autoincrement())
+  userId   Int
+  user     User     @relation(fields: [userId], references: [id])
+  token    String
+  expiryAt DateTime
+}
+
+model Desk {
+  id          Int         @id @default(autoincrement())
+  name        String
+  description String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  // Relations
+  userId      Int
+  user        User        @relation(fields: [userId], references: [id])
+  flashcards  Flashcard[]
+}
+
+model Flashcard {
   id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  // Relations
+  deskId Int
+  desk   Desk @relation(fields: [deskId], references: [id])
 }
