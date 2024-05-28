@@ -4,3 +4,5 @@ Flashcards are study tools typically made up of cards with information on two si
 
 ## Setup
 Setup docker with database with volume.
+
+In port 5432
