@@ -8,4 +8,4 @@ Added composer, setup docker with database with volume.
 In port 5432 in continer and host system.
 
 Start using below command
-
+'''docker-compose'''
