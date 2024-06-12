@@ -12,4 +12,5 @@ export default {
   databaseUrl: process.env.DATABASE_URL,
   tokenSecret: process.env.TOKEN_SECRET,
   port: process.env.PORT,
+  api_prefix: process.env.API_PREFIX,
 };
