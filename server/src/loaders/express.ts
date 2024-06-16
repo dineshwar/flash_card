@@ -9,5 +9,5 @@ export default ({ app }: { app: express.Application }) => {
   // Transforms the raw string of req.body into json
   app.use(express.json());
   // Load API routes
-  // app.use(config.api_prefix, routes());
+  app.use(config.api_prefix, routes());
 };
