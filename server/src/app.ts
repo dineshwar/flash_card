@@ -1,4 +1,4 @@
-import config from "@config/index";
+import config from "@config/index.config";
 import express from "express";
 
 async function startServer() {
