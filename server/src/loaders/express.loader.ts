@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import config from "@config/index";
+import config from "@config/index.config";
 import routes from "@routes/index.routes";
 
 export default ({ app }: { app: express.Application }) => {

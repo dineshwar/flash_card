@@ -3,7 +3,7 @@ import express from "express";
 
 async function startServer() {
   const app = express();
-  await require("@loaders/express").default({ app: app });
+  await require("@loaders/express.loader").default({ app: app });
   app
     .listen(config.port, () => {
       console.log(`Server running in port: ${config.port}`);
